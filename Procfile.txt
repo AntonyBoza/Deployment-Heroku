@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/App_Risk_Waku.py -Dhttp.port=${PORT}
