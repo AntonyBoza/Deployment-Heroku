@@ -1,0 +1,14 @@
+$ git rm -r -f log
+$ rm 'log/development.log'
+$ rm 'log/production.log'
+$ rm 'log/server.log'
+$ rm 'log/test.log'
+$ git rm -r -f tmp
+$ fatal: pathspec 'tmp' did not match any files
+
+$ mkdir log
+$ echo '*.log' > log/.gitignore
+$ git add log
+$ echo tmp >> .gitignore
+$ git add .gitignore
+$ git commit -m "ignored log files and tmp dir"
