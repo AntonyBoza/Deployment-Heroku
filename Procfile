@@ -1,1 +1,1 @@
-web: gunicorn app:app-risk-1
+web: gunicorn app:app_risk_knn.py
