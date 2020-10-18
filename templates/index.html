@@ -1,0 +1,23 @@
+<div class="login">
+    <h1>Predecir probabilidad de Default en Préstamo</h1>
+     <h3>Ingrese los siguientes datos</h3>
+ 
+     <!-- Campos para entrada de datos a nuestro modelo de ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+        <input type="text" name="MONTO_PRESTAMO" placeholder="Monto del Préstamo (min 0.00, max 100000.00)" required="required" /><br>
+        <input type="text" name="MORO_PROM" placeholder="Morosidad promedio (días)" required="required"/><br>
+        <input type="text" name="PROMEDIO_INGRESOS" placeholder="Promedio ingresos ($) (min_value=0.00, max_value=2100000.00)" required="required"/><br>
+        <input type="text" name="MESES_DEFAULTS" placeholder="Meses en moratoria" required="required"/><br>
+        <input type="text" name="PORC_CUMP" placeholder="Porcentaje de cumplimiento (min_value=0.00, max_value=1.00)" required="required"/><br>
+        <input type="text" name="EMI" placeholder="EMI (min_value=0.00, max_value=5.00)" required="required"/><br>
+        <input type="text" name="BALANCE_INGRESOS" placeholder="Balance ingresos ($ min_value=-700.00, max_value=2100000.00)" required="required"/><br>
+ 
+        <button type="submit" class="btn">Predecir</button>
+ 
+    </form>
+ 
+    <br>
+    <br>
+    {{ prediction_text}}
+ 
+ </div>
